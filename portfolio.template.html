@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>{{portfolio.name}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Precise Portfolio for {{portfolio.name}}">
+    <meta name="author" content="precise.io">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/font-awesome/css/font-awesome.css">
+
+    <style type="text/css">
+      {{{css}}}
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+      <header>
+      </header>
+      <div class="content">
+        <div class="summary">
+          <section class="about">
+            <h1>{{portfolio.name}}</h1>
+            <h2>{{portfolio.comment}}</h2>
+          </section>
+
+        <section class="snapshots">
+          {{#each portfolio.snapshots}}
+          <div class="snapshot">
+            <a href="http://{{domain}}{{path}}">
+              <div class="photo">
+                <img width="180" height="180" src="{{this.profile.about.photo_url}}">
+                </div>
+                <h4>{{this.profile.about.name}}</h4>
+                <h3>{{this.profile.about.title}}</h3>
+                <p>{{{truncate this.profile.about.passion 120}}}</p>
+            </a>
+          </div>
+          {{/each}}
+        </section>
+      </div>
+    </div>
+</body>
+</html>

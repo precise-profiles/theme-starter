@@ -1,0 +1,89 @@
+body {
+  font-family: 'Lato';
+  margin: 0px;
+  font-size: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(243,244,245,1) 75%);
+
+}
+
+header {
+  margin: 20px;
+  position: sticky;
+  top: 0px;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(243,244,245,1) 100%);
+}
+
+.summary {
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: 0.9em;
+}
+
+.content {
+  padding: 20px 20px;
+}
+
+.summary section.about {
+}
+
+.summary h1 {
+}
+.summary h3 {
+}
+
+.snapshots {
+  margin-top: 75px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+   justify-content: flex-start;
+   text-align: center;
+   background-color: rgb(243 244 245);
+   border-radius: 12px;
+   padding: 10px;
+
+}
+.snapshots h4, h3, p {
+    color: #545e69;
+}
+
+.snapshot img {
+   margin-top: 20px;
+   border-radius: 50%;
+}
+
+
+.snapshot {
+   flex-basis:25%;
+   padding: 0 20px;
+ }
+
+@media (max-width: 768px) {
+  .content {
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+a {
+  text-decoration: none;
+}

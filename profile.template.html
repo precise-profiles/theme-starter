@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>{{profile.name}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Precise Profile for {{profile.name}}">
+    <meta name="author" content="precise.io">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/font-awesome/css/font-awesome.css">
+
+
+    <style type="text/css">
+      {{{css}}}
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+      <header>
+      </header>
+      <div class="content">
+        <div class="summary">
+          <section class="about">
+            <img class="profile-image" width="180" src="{{profile.about.photo_url}}" alt="{{profile.about.name}}" />
+            <h1>{{profile.about.name}}</h1>
+            <h3>{{profile.about.title}}</h3>
+          </section>
+
+          <section class="contact">
+              <ul class="social">
+                {{#each profile.network}}
+                  <li>
+                    <a href="{{this.url}}" title="{{this.type}}">
+                      <i class="fa {{logo this.type}}"></i>
+                    </a>
+                  </li>
+                {{/each}}
+              </ul>
+
+              {{#if profile.links.pdf}}
+                <a class="download" href="{{profile.links.pdf}}"><i class="fa fa-download"></i> Download</a>
+              {{/if}}
+          </section>
+
+          <section class="tracks">
+            <h2>Competencies</h2>
+            <ul>
+            {{#each profile.tracks}}
+              {{#if this.visible}}
+                <li>{{this.name}}</li>
+              {{/if}}
+            {{/each}}
+          </section>
+          <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+              {{#each profile.skills}}
+                <li>
+                  <span>{{this.name}}</span>
+                </li>
+              {{/each}}
+            </ul>
+          </section>
+          <section class="passion">
+            <h2>Interests</h2>
+            <p>{{profile.about.passion}}</p>
+          </section>
+        </div>
+        <div class="detail">
+          <section>
+            <h2>Summary</h2>
+            <div>
+              {{{md profile.about.bio}}}
+            </div>
+          </section>
+
+          <section>
+             {{#if (latestProjects profile)}}
+                <h2>Recent projects</h2>
+                  {{#each (latestProjects profile)}}
+                  <div class="project">
+                    <h3 class="title">{{this.title}} {{#if this.period }} <span class="year">| {{this.period}}</span> {{/if}}</h3>
+                    <p>{{{md this.description}}}</p>
+                  </div>
+                  {{/each}}
+              {{/if}}
+          </section>
+
+          <section>
+            <h2>Experience</h2>
+              {{#each profile.experience}}
+                <div class="experience">
+                  <h3 class="title">{{this.role}} <span class="place">| {{this.place}}, </span> <span class="year">{{this.period}}</span></h3>
+                  <p>{{{md this.description}}}</p>
+                </div>
+              {{/each}}
+          </section>
+          {{#if profile.education}}
+          <section>
+            <h2>Education</h2>
+            {{#each profile.education}}
+              <h3>{{this.description}} </h3>
+              <h4>{{this.place}} <span class="year">{{this.period}}</span></h4>
+            {{/each}}
+          </section>
+          {{/if}}
+
+        </div>
+      </div>
+    </div>
+</body>
+</html>

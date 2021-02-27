@@ -1,0 +1,22 @@
+{
+  "name": "precise-template-2",
+  "version": "0.0.1",
+  "description": "Precise theme example 2",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "bundledDependencies": [
+    "handlebars",
+    "marked"
+  ],
+  "dependencies": {
+    "handlebars": "^4.1.2",
+    "marked": "^0.7.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.1.2",
+    "nodemon": "^1.19.1"
+  }
+}

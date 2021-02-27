@@ -1,0 +1,186 @@
+  body {
+    font-family: 'Lato';
+    margin: 0px;
+    font-size: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(243,244,245,1) 75%);
+
+  }
+
+  header {
+    margin: 20px 0px;
+    position: sticky;
+    top: 0px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(243,244,245,1) 100%);
+
+  }
+
+  .logo {
+    width: 220px;
+    height: 76px;
+    background-repeat: no-repeat;
+    background-image:url('data:image/png;base64,');
+  }
+
+
+  .summary {
+    grid-area: summary;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  .detail {
+    grid-area: detail;
+  }
+
+  h1, h2 {
+    color: #545e69;
+  }
+
+  p {
+    color: #434343;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .detail ul {
+    line-height: 1.4;
+  }
+
+  .summary ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  ul li {
+    color: #434343;
+    font-weight: 300;
+  }
+
+  section.skills li,  section.contact li {
+    display:inline;
+    line-height:1.5;
+  }
+
+  section.skills li::after {
+      content: '/';
+  }
+
+
+  section.contact {
+    text-align: center;
+  }
+  section.contact a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #b0b7bf;
+    background-clip: padding-box;
+    color: #fff;
+    text-align: center;
+  }
+
+  section.contact li {
+    padding: 5px;
+  }
+  section.contact a i {
+    font-size: 1.5em;
+    padding-top: 10px;
+  }
+
+  .content {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1.8fr 4fr;
+    grid-template-areas: "summary detail";
+    color: #444;
+    padding: 20px 20px;
+  }
+
+  .summary section.about {
+    text-align:center;
+  }
+
+  .summary h1 {
+    text-align: center;
+  }
+  .summary h3 {
+    text-align: center;
+  }
+
+  .detail h2 {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+  }
+
+  .detail h3 {
+    font-weight: 400;
+    color: #545e69;
+  }
+
+  span.year, span.place {
+    font-weight: 300;
+  }
+
+  section.about img {
+     margin-top: 20px;
+     border-radius: 50%;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      grid-template-areas: "summary" "detail";
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .wrapper {
+      width: 1170px;
+      margin: 0 auto;
+    }
+  }
+
+  @media print {
+    body {
+      font-size: 125%;
+    }
+    .project, .experience  {
+      page-break-inside: avoid;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        display: -webkit-box;
+        -webkit-flex-direction: row;
+    }
+    .summary {
+      flex:none;
+      margin-right: 25px;
+      width: 350px;
+    }
+    .detail {
+      flex: 1;
+      width: 720px;
+    }
+    p {
+      font-weight: 400;
+    }
+    ul li { font-weight: 400;
+    }
+
+    section.contact a i {
+      font-size:1.2em;
+    }
+
+    .detail h3 {
+      font-weight: 600;
+    }
+
+    .download {
+      display:none!important;
+    }
+  }
+
