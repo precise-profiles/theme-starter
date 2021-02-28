@@ -7,7 +7,7 @@
   }
 
   header {
-    margin: 20px 0px;
+    margin: 20px;
     position: sticky;
     top: 0px;
     background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(243,244,245,1) 100%);
