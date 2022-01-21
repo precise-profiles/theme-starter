@@ -42,6 +42,16 @@
                 <h4>{{this.profile.about.name}}</h4>
                 <h3>{{this.profile.about.title}}</h3>
                 <p>{{{truncate this.profile.about.passion 120}}}</p>
+
+                {{#if (showTracks @root.portfolio)}}
+                  <ul class="tracks">
+                  {{#each this.profile.tracks}}
+                    {{#if this.visible}}
+                      <li class="chip">{{this.name}}</li>
+                    {{/if}}
+                  {{/each}}
+                  </ul>
+                {{/if}}
             </a>
           </div>
           {{/each}}

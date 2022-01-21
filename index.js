@@ -57,6 +57,10 @@ Handlebars.registerHelper('latestProjects', function(profile) {
   return projects.slice(0, 8);
 });
 
+Handlebars.registerHelper('showTracks', function(portfolio) {
+  return portfolio.tracks && portfolio.tracks.visible
+});
+
 const renderProfile = function(profile) {
   return render('profile', profile);
 };

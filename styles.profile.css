@@ -110,6 +110,10 @@
     text-align: center;
   }
 
+  .summary section li {
+    line-height: 1.6;
+  }
+
   .detail h2 {
     border-bottom: 1px solid;
     padding-bottom: 10px;
