@@ -73,16 +73,6 @@
             <h2>Interests</h2>
             <p>{{profile.about.passion}}</p>
           </section>
-          {{#if profile.certifications}}
-          <section>
-            <h2>Certifications</h2>
-            <ul>
-            {{#each profile.certifications}}
-            <li>{{this.name}}</li>
-            {{/each}}
-            </ul>
-          </section>
-          {{/if}}
         </div>
         <div class="detail">
           <section>
@@ -122,7 +112,14 @@
             {{/each}}
           </section>
           {{/if}}
-
+          {{#if profile.certifications}}
+          <section>
+            <h2>Certifications</h2>
+            {{#each profile.certifications}}
+            <h3 class="title">{{this.name}} <span class="place">| {{this.place}}</span>{{#if this.period}}<span class="year">, {{this.period}}</span>{{/if}}</h3>
+            {{/each}}
+          </section>
+          {{/if}}
         </div>
       </div>
     </div>
