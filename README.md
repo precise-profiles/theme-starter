@@ -1,6 +1,6 @@
-# Everest Precise Theme
+# Precise Theme
 
-This provides the styling and layout for Everest Engineering [Precise](http://precise.io) Portfolios and Profiles.
+This provides the styling and layout for [Precise](http://precise.io) Portfolios and Profiles.
 
 ## So you want to theme a Portfolio or Profile
 
